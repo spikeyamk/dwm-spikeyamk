@@ -38,5 +38,5 @@ package() {
   make PREFIX=/usr DESTDIR="$pkgdir" install
   install -Dm644 LICENSE "$pkgdir/usr/share/licenses/$pkgname/LICENSE"
   install -Dm644 README "$pkgdir/usr/share/doc/$pkgname/README"
-  install -Dm644 "$srcdir/dwm.desktop" "$pkgdir/usr/share/xsessions/dwm.desktop"
+  install -Dm644 "$srcdir/$pkgname/dwm.desktop" "$pkgdir/usr/share/xsessions/dwm.desktop"
 }
