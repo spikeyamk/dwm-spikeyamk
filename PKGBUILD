@@ -12,7 +12,7 @@ arch=(x86_64)
 url="https://www.github.com/spikeyamk/dwm-spikeyamk.git"
 license=('MIT')
 groups=()
-depends=('libx11' 'libxinerama' 'libxft' 'freetype2' 'st' 'dmenu' 'ttf-hack' 'ttf-joypixels' 'rofi')
+depends=('libx11' 'libxinerama' 'libxft' 'freetype2' 'st-spikeyamk' 'dmenu' 'ttf-hack' 'ttf-joypixels' 'rofi')
 makedepends=()
 checkdepends=()
 optdepends=()
@@ -34,7 +34,7 @@ build() {
 }
 
 package() {
-  cd "$srcdir/$pkgname-$pkgver"
+  cd "$srcdir/$pkgname"
   make PREFIX=/usr DESTDIR="$pkgdir" install
   install -Dm644 LICENSE "$pkgdir/usr/share/licenses/$pkgname/LICENSE"
   install -Dm644 README "$pkgdir/usr/share/doc/$pkgname/README"
