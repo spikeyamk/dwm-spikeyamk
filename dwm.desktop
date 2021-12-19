@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=DWM on Xorg
+Comment=This session logs you into DWM
+Exec=/home/spikeyamk/scripts/dwm
+TryExec=/usr/local/bin/dwm
+Type=Application
+DesktopNames=DWM
+X-GDM-SessionRegisters=true
