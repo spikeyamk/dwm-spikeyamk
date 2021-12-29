@@ -11,11 +11,11 @@ static const char dmenufont[]       = "Hack:size=18:antialias=true:autohint=true
 /* Setting colors */
 static const char norm_fg[] = "#e8d4c7";
 static const char norm_bg[] = "#0f061b";
-static const char norm_border[] = "#4a1b23";
+static const char norm_border[] = "#0f061b";
 
 static const char sel_fg[] = "#e8d4c7";
 static const char sel_bg[] = "#4a1b23";
-static const char sel_border[] = "#a2948b";
+static const char sel_border[] = "#4a1b23";
 
 static const char urg_fg[] = "#e8d4c7";
 static const char urg_bg[] = "#A35B67";
@@ -39,7 +39,7 @@ static const Rule rules[] = {
 	 */
 	/* class      instance    title       tags mask     isfloating   monitor    float x,y,w,h         floatborderpx*/
 	{ "Gimp",     NULL,       NULL,       0,            1,           -1,        50,50,500,500,        5 },
-	{ "Firefox",  NULL,       NULL,       1 << 8,       0,           -1,        50,50,500,500,        5 },
+/*	{ "Firefox",  NULL,       NULL,       1 << 8,       0,           -1,        50,50,500,500,        5 },*/
 };
 
 /* layout(s) */
