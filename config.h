@@ -75,16 +75,14 @@ static const char *termcmd[]  = { "st", NULL };
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
-	{ MODKEY,                       XK_q,      spawn,          SHCMD("qutebrowser") },
-	{ MODKEY,                       XK_w,      spawn,          SHCMD("pcmanfm") },
+	{ MODKEY,                       XK_w,      spawn,          SHCMD("qutebrowser") },
 	{ MODKEY,                       XK_s,      spawn,          SHCMD("setxkbmap sk") },
 	{ MODKEY,                       XK_u,      spawn,          SHCMD("setxkbmap us") },	
-	{ MODKEY,                       XK_r,      spawn,          SHCMD("rofi -show run") },
 
 
 
 
-	{ MODKEY|ShiftMask,             XK_p,      spawn,          {.v = dmenucmd } },
+	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
 	{ MODKEY,                       XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
@@ -93,7 +91,7 @@ static Key keys[] = {
 	{ MODKEY,                       XK_d,      incnmaster,     {.i = -1 } },
 	{ MODKEY,                       XK_h,      setmfact,       {.f = -0.05} },
 	{ MODKEY,                       XK_l,      setmfact,       {.f = +0.05} },
-	{ MODKEY,                       XK_p, zoom,           {0} },
+	{ MODKEY|ShiftMask,             XK_p, zoom,           {0} },
 	{ MODKEY,                       XK_Tab,    view,           {0} },
 	{ MODKEY|ShiftMask,             XK_c,      killclient,     {0} },
 	{ MODKEY,                       XK_t,      setlayout,      {.v = &layouts[0]} },
