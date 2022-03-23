@@ -1,12 +1,12 @@
 /* See LICENSE file for copyright and license details. */
 
 /* appearance */
-static const unsigned int borderpx  = 4;        /* border pixel of windows */
+static const unsigned int borderpx  = 2;        /* border pixel of windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
-static const char *fonts[]          = { "Hack:size=18:antialias=true:autohint=true" };
-static const char dmenufont[]       = "Hack:size=18:antialias=true:autohint=true";
+static const char *fonts[]          = { "UbuntuMono:size=14:antialias=true:autohint=true" };
+static const char dmenufont[]       = "UbuntuMono:size=14:antialias=true:autohint=true";
 
 /* Setting colors */
 static const char norm_fg[] = "#e8d4c7";
@@ -14,8 +14,8 @@ static const char norm_bg[] = "#0f061b";
 static const char norm_border[] = "#0f061b";
 
 static const char sel_fg[] = "#e8d4c7";
-static const char sel_bg[] = "#4a1b23";
-static const char sel_border[] = "#4a1b23";
+static const char sel_bg[] = "#7d1281";
+static const char sel_border[] = "#e8d4c7";
 
 static const char urg_fg[] = "#e8d4c7";
 static const char urg_bg[] = "#A35B67";
@@ -40,6 +40,7 @@ static const Rule rules[] = {
 	/* class      instance    title       tags mask     isfloating   monitor    float x,y,w,h         floatborderpx*/
 	{ "Gimp",     NULL,       NULL,       0,            1,           -1,        50,50,500,500,        5 },
 /*	{ "Firefox",  NULL,       NULL,       1 << 8,       0,           -1,        50,50,500,500,        5 },*/
+	{ "Steam",    NULL,       NULL,       1 << 8,       0,           -1,        50,50,500,500,        5 },
 };
 
 /* layout(s) */
@@ -78,9 +79,6 @@ static Key keys[] = {
 	{ MODKEY,                       XK_w,      spawn,          SHCMD("qutebrowser") },
 	{ MODKEY,                       XK_s,      spawn,          SHCMD("setxkbmap sk") },
 	{ MODKEY,                       XK_u,      spawn,          SHCMD("setxkbmap us") },	
-
-
-
 
 	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
 	{ MODKEY,                       XK_Return, spawn,          {.v = termcmd } },
