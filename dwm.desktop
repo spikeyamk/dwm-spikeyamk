@@ -1,0 +1,7 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=dwm
+Comment=spikeyamk's Dynamic window manager
+Exec=/usr/local/bin/dwm
+Icon=dwm
+Type=XSession
