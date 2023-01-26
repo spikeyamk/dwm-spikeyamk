@@ -26,15 +26,15 @@ dwm: ${OBJ}
 	${CC} -o $@ ${OBJ} ${LDFLAGS}
 
 clean:
-	rm -f dwm ${OBJ} dwm-${VERSION}.tar.gz
+	rm -fv dwm ${OBJ} dwm-${VERSION}.tar.gz
 
 dist: clean
-	mkdir -p dwm-${VERSION}
-	cp -R LICENSE Makefile README config.def.h config.mk\
+	mkdir -pv dwm-${VERSION}
+	cp -Rv LICENSE Makefile README config.def.h config.mk\
 		dwm.1 drw.h util.h ${SRC} dwm.png transient.c dwm-${VERSION}
-	tar -cf dwm-${VERSION}.tar dwm-${VERSION}
+	tar -cfv dwm-${VERSION}.tar dwm-${VERSION}
 	gzip dwm-${VERSION}.tar
-	rm -rf dwm-${VERSION}
+	rm -rfv dwm-${VERSION}
 
 install: all
 	mkdir -pv ${DESTDIR}${PREFIX}/bin
@@ -47,7 +47,8 @@ install: all
 	cp -fv dwm.desktop /usr/share/xsessions
 
 uninstall:
-	rm -f ${DESTDIR}${PREFIX}/bin/dwm\
+	rm -fv ${DESTDIR}${PREFIX}/bin/dwm\
 		${DESTDIR}${MANPREFIX}/man1/dwm.1
+	rm -fv /usr/share/xsessions/dwm.desktop
 
 .PHONY: all options clean dist install uninstall
